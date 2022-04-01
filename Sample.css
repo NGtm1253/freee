@@ -53,6 +53,7 @@
             padding:10px;
             background-color: aqua;
             margin-top: 20px;
+            clear:right;
         }
         #submit:hover{
             background-color: purple;
