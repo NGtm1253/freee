@@ -3,21 +3,22 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link rel="stylesheet" type="text/css" href="Sample.css">
     </head>
     <body>
         <h1>休憩now...</h1>
         <!-- 休憩時間がある場合の内容 -->
-        <input type="radio" name="rest" id="rest" value="rest" checked>
-        <label for="rest">休憩する
+        <input type="radio" name="rest" id="rest1" value="rest" checked>
+        <label for="rest1">休憩する
         <!-- 休憩時間を入力する -->
         <!-- 休憩開始時間 -->
         <p>休憩時間<span id="a">12</span>時<span id="b">00</span>分開始</p>
-        <input type="number" id="ji" value="12" min="0" max="24" />
-        <input type="number" id="hun" value="00" min="0" max="59" />
+        <input type="number" id="ji" value="12" min="0" max="24" />時
+        <input type="number" id="hun" value="00" min="0" max="59" />分
         <!-- 休憩終了時間 -->
         <p>休憩時間<span id="c">13</span>時<span id="d">00</span>分終了</p>
-        <input type="number" id="ji2" value="13" min="0" max="24" />
-        <input type="number" id="hun2" value="00" min="0" max="59" />
+        <input type="number" id="ji2" value="13" min="0" max="24" />時
+        <input type="number" id="hun2" value="00" min="0" max="59" />分
         <!-- 休憩時間を反映するボタン -->
         <input type="button" value="時間を反映" onclick="timeman3()" /><br></br>
         <!-- 特記事項があれば入力するボックス -->
@@ -27,7 +28,9 @@
         <input type="radio" name="rest" id="norest" value="norest">
         <label for="norest">休憩無し</label><br><br>
         <!-- 休憩の内容を送信するボタン -->
-        <input type="submit" value="休憩終了します..." onclick="check()">
+        <input id="submit" type="submit" value="休憩終了します..." onclick="check()">
+        <footer>現在時刻 : <a id="time_el"></a></footer>
+        <script type="text/javascript" src="time2.js"></script>
         <!-- 時間を反映するJSの関数 -->
         <script src="timeman3.js"></script>
         <!-- ポップアップのボタンを押したときに次の画面に移行する -->

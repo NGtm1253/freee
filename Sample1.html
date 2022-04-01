@@ -3,12 +3,60 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <style type="text/css">
+        h1{
+            text-align:center;
+        }
+        footer{
+            text-align:right;
+            margin:20px;
+        }
+        #出勤{
+            font-size:30px;
+            margin: 20px;
+            margin-left:40px;
+            border-style:double;
+            border-width:2px;
+            border-color:#000000;
+            border-radius:30px;
+            padding:10px;
+            background-color: aqua;
+            margin-top: 20px;
+        }
+        #出勤:hover{
+            background-color:red;
+            border-radius:30px;
+            padding: 15px;
+            border-width:2px;
+            font-size:35px;
+        }
+        #変更{
+            font-size:30px;
+            margin: 20px;
+            margin-left:40px;
+            border-style:double;
+            border-width:2px;
+            border-color:#000000;
+            border-radius:30px;
+            padding:10px;
+            background-color: aqua;
+            margin-top: 20px;
+        }
+        #変更:hover{
+            background-color:red;
+            border-radius:30px;
+            padding: 15px;
+            border-width:2px;
+            font-size:35px;
+        }
+        </style>
     </head>
     <body>
-        <h1>打刻</h1>
-        <p id="time_el"></p>
-        <a href="Sample2.html">出勤</a>
-        <a href="Sample1-2.html">出勤時刻変更</a>
+        <h1>OOさん,ログインあざます。</h1>
+        
+        <a href="Sample2.html" id="出勤">打刻</a>
+        <a href="Sample1-2.html" id="変更">出勤時刻変更</a><br>
+        <footer>現在時刻 : <a id="time_el"></a></footer>
         <script src="time2.js"></script>
     </body>
 </html>

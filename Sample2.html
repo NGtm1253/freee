@@ -3,21 +3,67 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <style>
+        h1{
+            text-align:center;
+        }
+        h3{
+            text-align:center;
+        }
+        p{
+            border-bottom-style:solid;
+            border-bottom-width:5px;
+            border-bottom-color: orange;
+            border-top-style:solid;
+            border-top-width:5px;
+            border-top-color: orange;
+            font-size:30px;
+            text-align:center;
+        }
+        footer{
+            text-align:right;
+        }
+        #ji{
+            font-size:25px;
+            text-align:center;
+        }
+        #hun{
+            font-size:25px;
+            text-align: center;
+        }
+        #submit{
+            font-size:30px;
+            margin: 20px;
+            margin-left:40px;
+            border-style:double;
+            border-width:2px;
+            border-color:#000000;
+            border-radius:30px;
+            padding:10px;
+            background-color: aqua;
+            margin-top: 20px;
+        }
+        #submit:hover{
+            background-color: purple;
+        }
+        </style>
     </head>
     <body>
         <h1>田中さん！お疲れ様です！！</h1>
-        出勤時間を入力して下さい。お願いします。
-        
+        <h3>出勤時間を入力して下さい。お願いします。</h3>
         <!-- 出勤時間の入力欄 -->
-        <p>出勤時間<span id="a">9</span>時<span id="b">00</span>分</p>
-        <input type="number" id="ji" value="9" min="0" max="24" />
-        <input type="number" id="hun" value="00" min="0" max="59" />
+        <p>出勤時間:<span id="a">9</span>時<span id="b">00</span>分</p>
+        <input type="number" id="ji" value="9" min="0" max="24" />時
+        <input type="number" id="hun" value="00" min="0" max="59" />分
         <!-- ボタンで、入力した時間の反映する -->
-        <input type="button" value="時間を反映" onclick="timeman3()" /><br></br>
+        <input id="button" type="button" value="時間を反映" onclick="timeman3()" /><br></br>
         <!-- 打刻時間と出勤時間に誤差がある場合の記入欄 -->
         <textarea rows="5" cols="50" name="comment"> ※ 連絡事項を記入して下さい※ </textarea>
         <!-- これまでに入力した内容を送信するボタン -->
-        <input type="submit" value="送信する" onclick="check()">
+        <input id="submit" type="submit" value="送信する" onclick="check()"><br>
+        <!-- 現在時刻をフッターに表示 -->
+        <footer>現在時刻 : <a id="time_el"></a></footer>
+        <script type="text/javascript" src="time2.js"></script>
         <script src="timeman3.js"></script>
         <!-- ポップアップで「OK」を押した時に、次の画面に移行します。 -->
         <script>
