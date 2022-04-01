@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>出勤時刻変更</h1>
+        <p id="time_el"></p>
+        変更する日時を入力して下さい。<br>
+        <!-- 変更したい日にちの入力 -->
+        <p>変更する日にち
+        <span id="year">2022</span>年
+        <span id="month">4</span>月
+        <span id="day">1</span>日
+        </p>
+        <input type="number" id="C-year" value="2022" />
+        <input type="number" id="C-month" value="4" min="1" max="12" />
+        <input type="number" id="C-day" value="1" min="1" max="31" />
+        <!-- 変更する就労開始時刻を入力 -->
+        <p>就労開始時刻
+        <span id="a">9</span>時
+        <span id="b">00</span>分開始
+        </p>
+        <input type="number" id="ji" value="9" min="0" max="24" />
+        <input type="number" id="hun" value="00" min="0" max="59" />
+        <!-- 変更する就労終了時刻を入力 -->
+        <p>就労終了時刻
+        <span id="c">18</span>時
+        <span id="d">00</span>分終了
+        </p>
+        <input type="number" id="ji2" value="18" min="0" max="24" />
+        <input type="number" id="hun2" value="00" min="0" max="59" /><br><br>
+        <!-- その日の休憩時間を入力 -->
+        <!-- 休憩時間がある場合の内容 -->
+        <input type="radio" name="rest" id="rest" value="rest" checked>
+        <label for="rest">休憩する
+        <!-- 休憩開始時間 -->
+        <p>休憩時間<span id="e">12</span>時<span id="f">00</span>分開始</p>
+        <input type="number" id="r-ji" value="12" min="0" max="24" />
+        <input type="number" id="r-hun" value="00" min="0" max="59" />
+        <!-- 休憩終了時間 -->
+        <p>休憩時間<span id="g">13</span>時<span id="h">00</span>分終了</p>
+        <input type="number" id="r-ji2" value="13" min="0" max="24" />
+        <input type="number" id="r-hun2" value="00" min="0" max="59" /><br><br>
+        <!-- 特記事項があれば入力するボックス -->
+        <textarea rows="5" cols="50" name="comment"> ※ 連絡事項を記入して下さい※ </textarea>
+        </label><br><br>
+        <!-- 休憩が無い場合はチェックする -->
+        <input type="radio" name="rest" id="norest" value="norest">
+        <label for="norest">休憩無し</label><br><br>
+        <!-- 休憩内容の入力終了 -->
+        <!-- 時間を反映するボタン -->
+        <input type="button" value="時間を反映" onclick="timeman3()" />
+        <br></br>
+        <!-- 特記内容があれば、入力する欄 -->
+        全体の内容で、コメントがあれば、入力して下さい。<br>
+        <textarea rows="5" cols="50" name="comment"> ※ 連絡事項を記入して下さい※ </textarea>
+        <br>
+        <!-- 入力内容を送信するボタン -->
+        <input type="submit" value="送信する" onclick="check()">
+        <script>
+            function check(){
+                if(confirm("間違いないですか?"))location.href = 'Sample1-3.html';
+            }
+        </script>
+        <script src="time2.js"></script>
+        <script src="timeman3.js"></script>
+        
+    </body>
+</html>

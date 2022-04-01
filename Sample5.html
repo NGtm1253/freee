@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>今日、お疲れさまでした！</h1>
+        退勤時間を入力して下さい。お願いします。
+        <p>退勤時間<span id="a">18</span>時<span id="b">00</span>分</p>
+        <!-- 退勤時間を入力する -->
+        <input type="number" id="ji" value="18" min="0" max="24" />
+        <input type="number" id="hun" value="00" min="0" max="59" />
+        <!-- 退勤時間を反映するボタン -->
+        <input type="button" value="時間を反映" onclick="timeman3()" /><br></br>
+        <!-- 特記事項があれば入力するボックス -->
+        <textarea rows="5" cols="50" name="comment"> ※ 連絡事項を記入して下さい※ </textarea>
+        <!-- 入力した内容を送信するボタン -->
+        <input type="submit" value="送信する" onclick="check()">
+        <!-- 時間を反映するJSの関数 -->
+        <script src="timeman3.js"></script>
+        <!-- ポップアップのボタンを押したときに次の画面に移行する -->
+        <script>
+        function check(){
+            if(confirm("入力内容を送信しても、よろしいでしょうか?"))location.href='Sample6.html';
+        }
+        </script>
+    </body>
+</html>
